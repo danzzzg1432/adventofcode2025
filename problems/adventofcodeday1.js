@@ -2,14 +2,10 @@ let count = 0
 let dial = 50
 function fix_current_rotation(num) { 
     const modulo = num % 100
-    if (modulo < 0) { 
-        return (100 + modulo) /* 99 - modulo here also works. Why? if modulo < 0, becomes 99 + modulo due to 
-            * PEMDAS. say modulo = -34, becomes 133 i.e. a rotation of 33. this is equivalent to 66 IF you 
-            * flip the rotations (i.e. turning right becomes left now). This could be very wrong! All in all, 
-            * at the end it all works to 1191 for my solution.
-        */
+    if (modulo < 0) {
+        return (100 + modulo);
     } else {
-        return modulo
+        return modulo;
     }
 }
 function rotate(direction) {
