@@ -3,7 +3,7 @@ let dial = 50
 function fix_current_rotation(num) { 
     const modulo = num % 100
     if (modulo < 0) {
-        return (100 + modulo);
+        return (99 - modulo);
     } else {
         return modulo;
     }
