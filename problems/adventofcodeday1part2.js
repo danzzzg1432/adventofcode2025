@@ -22,9 +22,6 @@ function rotate(command) {
         }
     }
 }
-
-
-
 function main(input) { 
     const commands = input.trim().split('\n');
     commands.forEach(command => rotate(command.trim()));
@@ -34,3 +31,4 @@ const { btoa } = require('buffer');
 const fs = require('fs');
 const input = fs.readFileSync('input1.txt', 'utf8');
 main(input);
+
