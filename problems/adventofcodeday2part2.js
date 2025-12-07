@@ -7,9 +7,12 @@ let sum = 0
 function period(idRange) { 
     const minRange = Number(idRange[0]);
     const maxRange = Number(idRange[1]);
-    for (let eyeD = minRange; eyeD <= maxRange + 1; eyeD++ ) {  // going 1+ through the ID range
+    for (let eyeD = minRange; eyeD <= maxRange; eyeD++ ) {  // going 1+ through the ID range
         for (let patternLength = 1; patternLength <= Math.floor(String(eyeD).length/2); patternLength++) {  // changing pattern lengths until eyeD/2.floor()
             const arr = [];
+            /* faster way to sieve out incompatible numbers is to check whether or not length of eyeD mod patternLength is equal to 0
+            * => if it isn't, simply skip the number 
+            */
             for (let x = 0; x < String(eyeD).length; x += patternLength ) { 
                 arr.push(String(eyeD).slice(x, x + patternLength)); // slice the eyeD into equal parts or tries to at least
             }
