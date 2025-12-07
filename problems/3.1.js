@@ -26,12 +26,10 @@ function highestJoltage(numArr) {
     joltageSum = joltageSum + (numOne * 10) + numTwo
 }
 
-
 function main() { 
     const testInput = input.trim().split("\n")
     testInput.forEach(element => highestJoltage(element.split("").map(Number)))
     console.log(joltageSum);
 }
-
 
 main()
